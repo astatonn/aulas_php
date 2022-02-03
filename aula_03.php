@@ -32,3 +32,17 @@ function minha_func (...$argumentos) {
 }
 
 minha_func (10, 20, 30, 40, 50);
+
+# FUNÇÃO ANÔNIMA
+
+/* São funções que não possuem nome e podem ser definidas como um valor atribuído à uma variável
+
+Ex.:
+    $a = function (){
+        ....
+        return "retorno"
+    };
+
+    Atentar para o ;
+
+    echo $a ('parametro');
