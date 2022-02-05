@@ -119,4 +119,80 @@ Ex.:
     Só pode ser acessado dentro da própria classe
     O objeto instanciado pode ser passado como parãmtro para o método 
 
+# STATIC
 
+Permite usar os métodos e valores sem que seja necessário instanciar um objeto
+
+Ex.:
+    class Operacoes {
+        static $valor1;
+        static $valor2;
+
+        static function adcionar (){
+            return self::$valor1 + self::$valor2;
+        }
+
+        # Melhor aplicação:
+        static function adcionarOptimized ($valor1, $valor2){
+            return $valor1 + $valor2;
+        }
+    }
+
+    Operacoes::$valor1 = 10;
+    Operacoes::$valor2 = 20;
+
+    echo Operacoes::adcionar();
+    echo Operacoes::adcionarOptimized(10,20);
+
+# CONSTANT, DEFINE, DEFINED
+
+Constantes globail e locais fora do contexto da classe
+
+Ex.:
+    define('APP_NAME', 'Meu site'); # SEMPRE EM LETRAS MAIÚSCULAS
+                                    # ACEITA VETOR, INT, STRING, FLOAT, BOOL
+    defined ('CONSTANTE') or define ('CONSTANTE', 'valor');
+    
+# CONSTANTE MÁGICA
+    - São 8 e variam automaticamente.
+
+    echo __LINE__ . '<br>' # indica o número da linha de código no script;
+    echo __FILE__ . '<br>' # identifica o caminho completo
+    echo __DIR__ . '<br>' # identifica a pasta onde o script está localizado
+    echo __FUNCTION__ . '<br>' # identifica o nome da função
+    echo __CLASS__ . '<br>' # identifica o nome da classe
+    echo __METHOD__ . '<br>' # identifica o nome do método
+    echo __NAMESPACE__ . '<br>' # identifica o namespace
+
+# CLASSES ABSTRATAS
+    Implementação parcial para outras implementações crescerem a classe original
+
+# TRAITS
+    Grupo de métodos que podem ser inseridos dentro de uma classe.
+
+Ex.:
+    trait MinhasFuncoes {
+        public function fun1 ($foo){
+            ....
+        }
+
+        public function fun2 ($foo){
+            ...
+        }
+    }
+
+    class Classe {
+        use MinhasFuncoes;
+    }
+
+    $v = new Classe();
+    $v->fun1('valor');
+
+# INCLUDE
+
+Substitui uma linha de código por todo o outro script
+
+
+# REQUIRE
+
+Impede a execução do aplicativo caso haja algum problema na importação de um arquivo
