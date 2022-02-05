@@ -46,3 +46,45 @@ Ex.:
     Atentar para o ;
 
     echo $a ('parametro');
+
+# CLOSERUES E ARROW FUNCTIONS
+
+/* São funções anõnimas que podem ser usadas variáveis do escopo global
+
+Ex.:
+    $x = 20; # VARIÁVEL 
+
+    $minhaClosure = function ($z) use ($x) {
+        ...
+        # NÃO ALTERA O VALOR DAS VARIÁVEIS GLOBAIS
+    };
+
+    $minhaClosure (10);
+
+Ex.:
+    # ARROW FUNCTION SÃO FUNÇÕES CLOSURE POREM ESCRITO DE FORMA MAIS SIMPLES E QUE JÁ CAPTURAM AUTOMATICAMENTE OS VALORES DAS VARIÁVEIS GLOBAIS
+    $x = 20;
+
+    $minhaFuncao = fn($z) => "$x - $z";
+
+    Não necessita de um retorno nem das chaves
+
+# GENERATORS
+
+/* Função que gera valores em série.
+Cada chamada da execução da função executa um estado da mesma
+
+É retornado pela palavra reserva 'yield' que guarda o estado da função permitindo que a mesma continue de sua última execução
+
+Ex.: 
+    function buscarNumero(){
+        for ($i = 0; $i < 10; $i++){
+            yield $i;
+        }
+    }
+
+    # É um iterador até que não haja mais possibilidade de execução da função
+
+    yield from ['nome1', 'nome2', 'nome3'];
+
+    # É otimizado para devolver um valor por vez e economizar memória
