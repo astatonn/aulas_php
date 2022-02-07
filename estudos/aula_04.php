@@ -196,3 +196,13 @@ Substitui uma linha de código por todo o outro script
 # REQUIRE
 
 Impede a execução do aplicativo caso haja algum problema na importação de um arquivo
+
+#INCLUDE_ONCE
+
+Funciona da mesma forma que o include, mas caso o script já tenha sido adicionado antes no script
+ele não vai permitir.
+
+#REQUIRE_ONCE
+
+Funciona da mesma forma que o require, mas caso o script já tenha sido adicionado antes no script
+ele não vai permitir.
