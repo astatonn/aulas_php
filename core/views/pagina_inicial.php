@@ -9,5 +9,6 @@
 <?php foreach ($clientes as $client):?>
 
     <li><?= $client; ?></li>
+    <i class="far fa-trash-alt"></i>
 
 <?php endforeach;?>
