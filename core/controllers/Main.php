@@ -2,7 +2,7 @@
 
 namespace core\controllers;
 
-use core\classes\Functions;
+use core\classes\Store;
 
 class Main {
 
@@ -10,13 +10,15 @@ class Main {
     public function index (){
 
         $dados = [
-            'titulo'        => 'Este eh o título',
+            'titulo'        =>  APP_NAME . ' ' . APP_VERSION,
             'clientes'      => ['joao', 'ana', 'carlos'],
         ];
 
-        Functions::Layout([
+        Store::Layout([
             'layouts/html_header',
-            'pagina_inicial',
+            'layouts/header',
+            'inicio',
+            'layouts/footer',
             'layouts/html_footer',
         ], $dados);
     }

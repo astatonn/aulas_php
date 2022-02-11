@@ -4,9 +4,10 @@ namespace core\classes;
 
 use Exception;
 
-class Functions {
+class Store {
 
     # FUNÇÕES GERAIS 
+    //=====================================
     public static function Layout ($structures, $dados = null){
         # APRESENTAR AS VIEWS DA APLICAÇÃO
 
@@ -25,5 +26,11 @@ class Functions {
         foreach ($structures as $structure){
             include ("../core/views/$structure.php");
         }
+    }
+
+    //=====================================
+    public static function clienteLogado (){
+
+        return (isset($_SESSION['cliente']));
     }
 }
