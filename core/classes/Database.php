@@ -38,7 +38,8 @@ class Database {
     //======================================================================
     public function select ($sql, $par = null){
         
-        
+        $sql = trim($sql);
+
         # VERIFICA SE EH UMA INSTRUÇÃO SELECT
         if (!preg_match("/^SELECT/i", $sql)){
             throw new Exception ('Base de dados - Não é uma instrução SELECT');
@@ -80,7 +81,8 @@ class Database {
     //======================================================================
     public function insert ($sql, $par = null){
         
-        
+        $sql = trim($sql);
+
         # VERIFICA SE EH UMA INSTRUÇÃO INSERT
         if (!preg_match("/^INSERT/i", $sql)){
             throw new Exception ('Base de dados - Não é uma instrução INSERT');
@@ -117,6 +119,7 @@ class Database {
     //======================================================================
     public function update ($sql, $par = null){
         
+        $sql = trim($sql);
         
         # VERIFICA SE EH UMA INSTRUÇÃO UPDATE
         if (!preg_match("/^UPDATE/i", $sql)){
@@ -154,6 +157,7 @@ class Database {
     //======================================================================
     public function delete ($sql, $par = null){
         
+        $sql = trim($sql);
         
         # VERIFICA SE EH UMA INSTRUÇÃO DELETE
         if (!preg_match("/^DELETE/i", $sql)){
@@ -193,6 +197,7 @@ class Database {
     //======================================================================
     public function statement ($sql, $par = null){
         
+        $sql = trim($sql);
         
         # VERIFICA SE EH UMA INSTRUÇÃO diferente das anteriores
         if (preg_match("/^(DELETE|INSERT|UPDATE|DELETE)/i", $sql)){
@@ -229,13 +234,3 @@ class Database {
 
 
 }
-
-/*
-
-define ('MYSQL_SERVER',         'localhost');
-define ('MYSQL_DATABASE',       'php_store');
-define ('MYSQL_USER',           'user_php_store');
-define ('MYSQL_PASSWORD',       '');
-define ('MYSQL_CHARSET',        'utf8');
-
-*/
