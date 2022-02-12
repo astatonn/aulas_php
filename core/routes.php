@@ -3,8 +3,9 @@
 # COLEÇÃO DE ROTAS
 
 $routes = [
-    'home'          => 'main@index',
-    'carrinho'      => 'shop@carrinho'
+    'home'              => 'main@index',
+    'loja'              => 'main@loja',
+    'carrinho'          => 'main@carrinho',
 ];
 
 # DEFINIR AÇÃO PADRÃO
