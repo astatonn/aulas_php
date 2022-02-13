@@ -2,12 +2,16 @@
 
 namespace core\controllers;
 
+use core\classes\EnviarEmail;
 use core\classes\Store;
 
 class Main {
 
     //================================================================
     public function index (){
+        $email = new EnviarEmail();
+        $email->enviar_email_confirmacao_novo_cliente();
+        die();
 
         Store::Layout([
             'layouts/html_header',

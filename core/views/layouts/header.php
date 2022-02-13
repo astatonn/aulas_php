@@ -18,6 +18,8 @@ use core\classes\Store;
                     
 
             if (Store::clienteLogado()):?>
+
+            
                 <a href="?action=logout">Logout</a>
                 <a href="?action=conta">Minha Conta</a>
 
