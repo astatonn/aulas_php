@@ -6,6 +6,10 @@ $routes = [
     'home'              => 'main@index',
     'loja'              => 'main@loja',
     'carrinho'          => 'main@carrinho',
+
+    // cliente 
+    'novo_cliente'      => 'main@novo_cliente',
+    'criar_cliente'     => 'main@criar_cliente',
 ];
 
 # DEFINIR AÇÃO PADRÃO

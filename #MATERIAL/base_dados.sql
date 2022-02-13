@@ -11,27 +11,7 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
-
--- Copiando estrutura do banco de dados para php_store
-DROP DATABASE IF EXISTS `php_store`;
-CREATE DATABASE IF NOT EXISTS `php_store` /*!40100 DEFAULT CHARACTER SET latin1 */;
-USE `php_store`;
-
--- Copiando estrutura para tabela php_store.clientes
-DROP TABLE IF EXISTS `clientes`;
-CREATE TABLE IF NOT EXISTS `clientes` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `nome` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
-
--- Copiando dados para a tabela php_store.clientes: ~0 rows (aproximadamente)
-/*!40000 ALTER TABLE `clientes` DISABLE KEYS */;
-INSERT INTO `clientes` (`id`, `nome`) VALUES
-	(1, 'Joao'),
-	(2, 'Carlos'),
-	(3, 'Maria');
-/*!40000 ALTER TABLE `clientes` ENABLE KEYS */;
+-- Exportação de dados foi desmarcado.
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
