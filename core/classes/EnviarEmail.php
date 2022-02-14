@@ -2,7 +2,8 @@
 
 namespace core\classes;
 
-
+use Egulias\EmailValidator\EmailValidator;
+use Egulias\EmailValidator\Validation\RFCValidation;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
@@ -29,6 +30,14 @@ class EnviarEmail
             $mail->Port       = PHPMAILER_PORT;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
             //Recipients
+
+            # https://packagist.org/packages/egulias/email-validator
+            $validator = new EmailValidator();
+            
+            if (!$validator->isValid($email_cliente, new RFCValidation())){
+                return false;
+            }
+            
             $mail->setFrom(PHPMAILER_USERNAME, 'Mailer');
             $mail->addReplyTo($email_cliente, 'Information');
             $mail->addAddress('lucas.lima.rk@gmail.com', 'Lucas Lima');     //Add a recipient

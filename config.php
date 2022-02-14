@@ -14,6 +14,6 @@ define ('MYSQL_CHARSET',        'utf8');
 
 #PHPMAILER VARS
 define ('PHPMAILER_USERNAME',   'contato@leandrosmega.com');
-define ('PHPMAILER_PASSWORD',   '229719#Me');
+define ('PHPMAILER_PASSWORD',   '');
 define ('PHPMAILER_SMTP',       'smtp.titan.email');
 define ('PHPMAILER_PORT',       '587');

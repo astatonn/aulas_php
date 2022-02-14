@@ -6,7 +6,9 @@
         "email": "lucas.lima.rk@gmail.com"
     }],
     "require": {
-        "phpmailer/phpmailer": "^6.5"
+        "phpmailer/phpmailer": "^6.5",
+        "egulias/email-validator": "^3.1",
+        "wixel/gump": "^1.11"
     },
     "autoload": {
         "psr-4": {
